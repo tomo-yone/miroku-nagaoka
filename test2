@@ -1,0 +1,35 @@
+	b := strtoint(edit2.text);
+	a := a+1;
+	d := a+b;
+	if b <>0  then
+    begin
+		c := Trunc(a / d*100);
+    end
+	else
+	begin
+        c := 100;
+    end;
+
+	Edit1.text := inttostr(a);
+ 	Edit3.text := '勝率：'+inttostr(a)+'勝'+inttostr(b)+'敗'+FloatToStr(c)+'%';
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var
+	d :integer;
+	c	:Double;
+begin
+	a := strtoint(edit1.text);
+	b := b+1;
+	d := a+b;
+	if b <>0  then
+    begin
+		c := Trunc(a / d*100);
+    end
+	else
+	begin
+        c := 0;
+    end;
+
+	Edit2.text := inttostr(b);
+ 	Edit3.text := '勝率：'+inttostr(a)+'勝'+inttostr(b)+'敗'+FloatToStr(c)+'%';
